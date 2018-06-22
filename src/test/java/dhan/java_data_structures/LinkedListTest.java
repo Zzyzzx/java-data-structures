@@ -13,6 +13,5 @@ public class LinkedListTest {
     list.add("b");
     list.add("c");
     list.add("d");
-
   }
 }
