@@ -1,5 +1,7 @@
 package dhan.java_data_structures;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 import dhan.java_data_structures.linkedList.LinkedList;
@@ -13,5 +15,7 @@ public class LinkedListTest {
     list.add("b");
     list.add("c");
     list.add("d");
+    
+    assertEquals("abcd", list.toString());
   }
 }
