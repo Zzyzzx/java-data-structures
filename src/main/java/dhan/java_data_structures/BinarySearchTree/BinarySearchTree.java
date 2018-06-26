@@ -17,8 +17,15 @@ public class BinarySearchTree {
 
   }
 
-  public BinaryTreeNode findNextSmallest(BinaryTreeNode base) {
-    if()
+  public BinaryTreeNode search(BinaryTreeNode start, int val) {
+    if (start.value == val) {
+      return start;
+    } else if (start.left != null && start.value > val) {
+      return search(start.left, val);
+    } else if (start.right != null && start.value < val) {
+      return search(start.right, val);
+    }
+    return null;
   }
 
   public void addNode(BinaryTreeNode parent, int val) {
