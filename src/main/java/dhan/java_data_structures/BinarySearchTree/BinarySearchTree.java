@@ -17,6 +17,21 @@ public class BinarySearchTree {
 
   }
 
+  public int height(BinaryTreeNode start) {
+    int leftHeight = 0;
+    int rightHeight = 0;
+    if (start.left == null && start.right == null) {
+      return 0;
+    }
+    if (start.left != null) {
+      leftHeight = 1 + height(start.left);
+    }
+    if (start.right != null) {
+      rightHeight = 1 + height(start.right);
+    }
+    return (leftHeight > rightHeight) ? leftHeight : rightHeight;
+  }
+
   public BinaryTreeNode search(BinaryTreeNode start, int val) {
     if (start.value == val) {
       return start;
